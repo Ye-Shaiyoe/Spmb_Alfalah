@@ -41,5 +41,6 @@ Website **SPMB (Sistem Penerimaan Murid Baru)** SMK Al-Falah adalah aplikasi ber
 - Arch Linux
 ---
 
-## 📂 Struktur Folder seperti di file
+## 📂 Halaman Aawal 
+<img width="1354" height="635" alt="Screenshot 2025-12-25 at 13-05-38 PPDB — Login SMK Al-Falah Bandung Indonesia" src="https://github.com/user-attachments/assets/63e7573f-da3f-4091-bdf7-48997876dc7c" />
 
