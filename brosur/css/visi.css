@@ -1,0 +1,498 @@
+/* Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* HAPUS transisi global untuk menghindari konflik */
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
+  color: #333;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Pola halus di background */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 20%
+    );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Header Navigation */
+header {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #1976d2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 20px;
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 6px;
+  /* HAPUS transisi untuk efek muncul */
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #bbdefb;
+  color: #1976d2;
+  /* HAPUS transform dan box-shadow hover */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  min-width: 180px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+nav li:hover .dropdown-content {
+  display: block;
+  /* HAPUS animasi fadeInDown */
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 20px;
+  display: block;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #bbdefb;
+  color: #1976d2;
+}
+
+/* Main Content */
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+/* === Animasi Fade-In-Up === */
+.section {
+  margin: 40px 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Visi */
+.visi-box {
+  background: linear-gradient(145deg, #e3f2fd, #bbdefb);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  margin-bottom: 30px;
+  border-left: 5px solid #1976d2;
+  /* HAPUS transisi untuk efek muncul */
+}
+
+.visi-box h2 {
+  margin-top: 0;
+}
+
+/* Misi */
+.misi-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.misi-list li {
+  background: linear-gradient(145deg, #ffffff, #f0f8ff);
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  /* HAPUS transisi untuk efek muncul */
+  position: relative;
+  padding-left: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out 0.1s, transform 0.5s ease-out 0.1s;
+}
+
+.misi-list li.fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.misi-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #1976d2;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* HAPUS hover effect untuk misi-list li */
+
+h1,
+h2 {
+  color: #1976d2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 25px 0 15px;
+  border-bottom: 3px solid #bbdefb;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #1976d2;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1976d2;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  /* HAPUS transisi */
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  background-color: #1565c0;
+  /* HAPUS transform */
+}
+
+/* HAPUS @keyframes fadeInDown karena tidak digunakan lagi */
+
+/* Hamburger Menu Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 21px;
+  justify-content: space-between;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #1976d2;
+  border-radius: 3px;
+  /* HAPUS transisi */
+}
+
+/* Responsive untuk mobile - Gaya Uiverse & Animasi dari Kanan */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    margin-left: auto; /* Pindahkan hamburger ke kanan */
+  }
+
+  nav {
+    position: fixed;
+    top: 70px; /* Sesuaikan dengan tinggi header */
+    left: 0; /* Mulai dari luar layar di sebelah kiri */
+    right: auto; /* Nonaktifkan dari kanan */
+    /* Ganti warna latar menjadi gelap seperti Uiverse */
+    background-color: #0D1117;
+    width: 85%;
+    max-width: 360px;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    padding: 20px;
+    z-index: 999;
+    /* Animasi: slide dari kiri */
+    transform: translateX(-100%); /* Mulai di luar layar kiri */
+    transition: transform 0.3s ease; /* Transisi untuk slide */
+    border-radius: 0 12px 12px 0; /* Radius di sisi kanan */
+  }
+
+  nav.active {
+    transform: translateX(0); /* Geser ke posisi 0 (tampil di layar) */
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px; /* Kurangi jarak antar item */
+  }
+
+  nav li {
+    margin: 0;
+    position: relative;
+  }
+
+  /* Modifikasi link utama */
+  nav a {
+    text-decoration: none;
+    color: white; /* Warna teks putih */
+    font-weight: 500;
+    padding: 12px 20px; /* Tambah sedikit padding */
+    display: block;
+    border-radius: 4px; /* Sudut sedikit melengkung */
+    position: relative;
+    transition: all 0.2s ease; /* Transisi untuk hover */
+  }
+
+  /* Hover untuk link utama */
+  nav a:hover {
+    background-color: #21262C; /* Warna hover seperti Uiverse */
+    transform: scale(0.98, 0.98); /* Efek scale sedikit */
+    filter: blur(0.5px); /* Tambahkan efek blur kecil saat hover */
+  }
+
+  /* Fokus dan Aktif */
+  nav a:focus,
+  nav a:active {
+    background-color: #1A1F24; /* Warna aktif/fokus seperti Uiverse */
+    outline: none; /* Hilangkan outline default */
+  }
+
+  /* Highlight biru di samping untuk link aktif/fokus */
+  nav a:focus::before,
+  nav a:active::before,
+  nav a.active::before { /* Tambahkan class 'active' secara JS jika perlu */
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 4px; /* Lebar highlight */
+    height: calc(100% - 10px); /* Tinggi penuh - margin atas/bawah */
+    background-color: #2F81F7; /* Warna biru seperti Uiverse */
+    border-radius: 2px 0 0 2px; /* Sudut melengkung di dalam */
+  }
+
+  /* Dropdown content di mobile */
+  .dropdown-content {
+    position: static; /* Tidak absolut di mobile */
+    /* Warna latar dropdown juga gelap */
+    background-color: #1A1F24;
+    margin-top: 10px;
+    padding-left: 20px; /* Indentasi */
+    border-radius: 4px;
+    box-shadow: none; /* Hilangkan shadow */
+    display: none;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+
+  /* Link di dalam dropdown */
+  .dropdown-content a {
+    color: white; /* Warna teks putih */
+    padding: 12px 20px;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #21262C; /* Garis pemisah subtle */
+  }
+
+  .dropdown-content a:last-child {
+    border-bottom: none;
+  }
+
+  /* Hover untuk link dropdown */
+  .dropdown-content a:hover {
+    background-color: #21262C; /* Warna hover seperti link utama */
+  }
+
+  .dropdown-content a:focus,
+  .dropdown-content a:active {
+    background-color: #1A1F24; /* Warna aktif/fokus */
+  }
+
+  /* Highlight biru untuk dropdown link aktif/fokus */
+  .dropdown-content a:focus::before,
+  .dropdown-content a:active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 4px;
+    height: calc(100% - 10px);
+    background-color: #2F81F7;
+    border-radius: 2px 0 0 2px;
+  }
+
+  /* Animasi Hamburger */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .misi-list li {
+    padding-left: 60px;
+  }
+}
+
+/* Footer (selaras dengan tema biru situs) */
+footer {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(240, 248, 255, 0.96) 100%);
+  color: #555;
+  padding: 24px 0;
+  margin-top: 40px;
+  border-top: 1px solid #bbdefb;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+footer::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, #1976d2 0%, #42a5f5 50%, #90caf9 100%);
+  opacity: 1;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.footer-content p {
+  margin: 6px 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-content p:first-child {
+  font-weight: 600;
+  color: #1976d2;
+  letter-spacing: 0.2px;
+}
+
+footer a {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+  text-decoration: underline;
+}

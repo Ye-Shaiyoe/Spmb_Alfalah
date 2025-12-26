@@ -1,0 +1,46 @@
+/* Fasilitas Sekolah */
+.fasilitas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.fasilitas-item {
+    background: linear-gradient(145deg, #ffffff, #f0f8ff);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fasilitas-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.fasilitas-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    
+}
+
+.fasilitas-item h3 {
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+.fasilitas-item p {
+    color: #555;
+    line-height: 1.6;
+}
+.section h3 {
+    text-align: center;
+    color: #1976d2;
+    margin-bottom: 15px;
+
+}
