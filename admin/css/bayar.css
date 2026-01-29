@@ -1,0 +1,330 @@
+:root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --danger-color: #e74c3c;
+            --light-gray: #ecf0f1;
+            --dark-gray: #7f8c8d;
+            --border-color: #dfe6e9;
+            --shadow: 0 2px 10px rgba(0,0,0,0.08);
+            --shadow-hover: 0 4px 20px rgba(0,0,0,0.12);
+        }
+
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Header Styling */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 2rem 0;
+            margin: -1rem -1rem 2rem -1rem;
+            box-shadow: var(--shadow);
+        }
+
+        .page-header h1 {
+            font-weight: 300;
+            font-size: 1.75rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .page-header .breadcrumb {
+            background: transparent;
+            margin-bottom: 0;
+            padding: 0;
+        }
+
+        .page-header .breadcrumb-item a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+        }
+
+        .page-header .breadcrumb-item.active {
+            color: white;
+        }
+
+        /* Stat Cards - Minimalis & Elegan */
+        .stat-card {
+            background: white;
+            border: none;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-color);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .stat-card.primary::before {
+            background: var(--accent-color);
+        }
+
+        .stat-card.success::before {
+            background: var(--success-color);
+        }
+
+        .stat-card.warning::before {
+            background: var(--warning-color);
+        }
+
+        .stat-card.info::before {
+            background: var(--primary-color);
+        }
+
+        .stat-card .card-body {
+            padding: 1.5rem;
+        }
+
+        .stat-card .stat-value {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-card .stat-label {
+            color: var(--dark-gray);
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-card .stat-icon {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+            color: var(--light-gray);
+            opacity: 0.3;
+        }
+
+        /* Card Styling */
+        .card {
+            border: none;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .card-header {
+            background: white;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.25rem 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Table Styling */
+        .table {
+            margin-bottom: 0;
+        }
+
+        .table thead th {
+            background-color: #f8f9fa;
+            border-bottom: 2px solid var(--border-color);
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 1rem;
+        }
+
+        .table tbody td {
+            padding: 1rem;
+            vertical-align: middle;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .table-hover tbody tr {
+            transition: all 0.2s ease;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #f8f9fa;
+            box-shadow: inset 4px 0 0 var(--accent-color);
+        }
+
+        /* Badge Styling */
+        .badge {
+            padding: 0.5rem 0.875rem;
+            font-weight: 500;
+            font-size: 0.8rem;
+            border-radius: 4px;
+        }
+
+        .badge.status-lunas {
+            background-color: var(--success-color);
+            color: white;
+        }
+
+        .badge.status-belum {
+            background-color: var(--danger-color);
+            color: white;
+        }
+
+        .badge.bg-info {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* Button Styling */
+        .btn-action {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+        }
+
+        /* Image Styling */
+        .bukti-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid var(--border-color);
+        }
+
+        .bukti-img:hover {
+            transform: scale(1.1);
+            border-color: var(--accent-color);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Modal Styling */
+        .modal-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            border-bottom: none;
+        }
+
+        .modal-header .btn-close {
+            filter: brightness(0) invert(1);
+        }
+
+        /* Riwayat Item */
+        .riwayat-container {
+            max-height: 450px;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+
+        .riwayat-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .riwayat-container::-webkit-scrollbar-track {
+            background: var(--light-gray);
+            border-radius: 10px;
+        }
+
+        .riwayat-container::-webkit-scrollbar-thumb {
+            background: var(--dark-gray);
+            border-radius: 10px;
+        }
+
+        .riwayat-item {
+            background: white;
+            border-left: 3px solid var(--accent-color);
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            box-shadow: var(--shadow);
+            transition: all 0.2s ease;
+        }
+
+        .riwayat-item:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateX(4px);
+        }
+
+        /* Alert Styling */
+        .alert {
+            border: none;
+            border-radius: 6px;
+            border-left: 4px solid;
+        }
+
+        .alert-info {
+            background-color: #e3f2fd;
+            border-left-color: var(--accent-color);
+            color: #1565c0;
+        }
+
+        .alert-warning {
+            background-color: #fff3cd;
+            border-left-color: var(--warning-color);
+            color: #856404;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            border-left-color: var(--danger-color);
+            color: #721c24;
+        }
+
+        /* Print Styling */
+        @media print {
+            .no-print {
+                display: none;
+            }
+            .sb-topnav, .sb-sidenav, footer, .page-header {
+                display: none !important;
+            }
+            #layoutSidenav_content {
+                margin-left: 0 !important;
+            }
+            body {
+                background: white;
+            }
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .stat-card .stat-value {
+                font-size: 1.5rem;
+            }
+            .stat-card .stat-icon {
+                font-size: 2rem;
+            }
+            .page-header h1 {
+                font-size: 1.5rem;
+            }
+        }
