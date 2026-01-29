@@ -1,0 +1,50 @@
+        .btn-delete {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .status-badge {
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .status-lunas {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .status-pending {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .status-belum-lunas {
+            background-color: #ffc107;
+            color: #000;
+        }
+
+        .status-belum-bayar {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .modal-header {
+            background-color: #f8f9fa;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .modal-title i {
+            color: #dc3545;
+        }
+
+        .modal-footer .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .modal-footer .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
