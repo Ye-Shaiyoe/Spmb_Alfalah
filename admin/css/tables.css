@@ -1,0 +1,84 @@
+
+            #datatablesSimple th, #datatablesSimple td {
+                white-space: nowrap;
+            }
+            .refresh-indicator {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: rgba(0, 123, 255, 0.9);
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                z-index: 9999;
+                display: none;
+                align-items: center;
+                gap: 10px;
+            }
+            .refresh-indicator.show {
+                display: flex;
+            }
+            .refresh-indicator i {
+                animation: spin 1s linear infinite;
+            }
+            @keyframes spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+            .last-update-badge {
+                background: #28a745;
+                color: white;
+                padding: 5px 15px;
+                border-radius: 20px;
+                font-size: 0.85rem;
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+            .bukti-thumbnail {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                cursor: pointer;
+                border-radius: 4px;
+                border: 1px solid #ddd;
+            }
+            .bukti-thumbnail:hover {
+                opacity: 0.8;
+                transform: scale(1.05);
+                transition: all 0.2s;
+            }
+            
+            /* Modal styles */
+            .image-modal {
+                display: none;
+                position: fixed;
+                z-index: 10000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.9);
+            }
+            .image-modal.show {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .modal-content-img {
+                max-width: 90%;
+                max-height: 90%;
+                object-fit: contain;
+            }
+            .close-modal {
+                position: absolute;
+                top: 20px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .close-modal:hover {
+                color: #bbb;
+            }
