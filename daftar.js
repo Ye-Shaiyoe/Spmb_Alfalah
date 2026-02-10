@@ -10,7 +10,6 @@ form.addEventListener("submit", async (e) => {
   msg.style.display = "none";
   msg.textContent = "";
 
-  // Validasi input
   if (!email.value.trim()) {
     msg.textContent = "Email wajib diisi.";
     msg.style.display = "block";
@@ -86,3 +85,4 @@ form.addEventListener("submit", async (e) => {
     submitBtn.textContent = originalBtnText;
   }
 });
+
