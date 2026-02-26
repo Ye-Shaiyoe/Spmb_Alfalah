@@ -1,7 +1,6 @@
 # 🎓 Web SPMB SMK Al-Falah
 
 Website **SPMB (Sistem Penerimaan Murid Baru)** SMK Al-Falah adalah aplikasi berbasis web yang digunakan untuk mengelola proses pendaftaran siswa baru secara **online**, mulai dari pendaftaran, login, hingga manajemen data oleh admin.
-
 ---
 
 ## 📌 Fitur Utama
