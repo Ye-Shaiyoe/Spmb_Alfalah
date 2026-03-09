@@ -17,7 +17,6 @@
       <span class="c2"></span>
       <span class="c3"></span>
     </div>
-
     <main class="container" role="main">
       <section class="panel-info">
         <div class="sekolah-title">SMK Al-Falah Bandung</div>
